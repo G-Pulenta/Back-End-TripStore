@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -34,4 +36,7 @@ public class User {
 
     @Column(name = "phone", nullable = false, length = 9)
     private String phone;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Trip> trips;
 }
