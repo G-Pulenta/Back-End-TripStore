@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2140f338-c011-496a-8eee-bbad3f95c5f1" name="Changes" comment="Feat: Trip Model Added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/upc/edu/BackEndTripStore/controller/TripController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upc/edu/BackEndTripStore/controller/TripController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/upc/edu/BackEndTripStore/model/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upc/edu/BackEndTripStore/model/Trip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/upc/edu/BackEndTripStore/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upc/edu/BackEndTripStore/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="2140f338-c011-496a-8eee-bbad3f95c5f1" name="Changes" comment="Feat: Trip Backend Added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +86,7 @@
       <workItem from="1686276135165" duration="790000" />
       <workItem from="1686276937629" duration="5817000" />
       <workItem from="1686328663087" duration="11378000" />
-      <workItem from="1686355999684" duration="3095000" />
+      <workItem from="1686355999684" duration="3726000" />
     </task>
     <task id="LOCAL-00001" summary="Add: Base Structure Files Added">
       <created>1686276316308</created>
@@ -115,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686355092673</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Feat: Trip Backend Added">
+      <created>1686361240878</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686361240878</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +138,7 @@
     <MESSAGE value="Add: Base Structure Files Added" />
     <MESSAGE value="Feat: User Model Added" />
     <MESSAGE value="Feat: Trip Model Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feat: Trip Model Added" />
+    <MESSAGE value="Feat: Trip Backend Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feat: Trip Backend Added" />
   </component>
 </project>
