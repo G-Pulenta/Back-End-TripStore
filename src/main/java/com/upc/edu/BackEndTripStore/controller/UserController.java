@@ -59,11 +59,13 @@ public class UserController {
         validateUser(updatedUser);
         return userService.updateUser(id, updatedUser);
     }
-    @DeleteMapping("/{id}")
+    @DeleteMapping("users/{id}")
     @Transactional
     public void deleteUser(@PathVariable int id) {
         userService.deleteUser(id);
     }
+
+
     // User Post Validation
     public void validateUser(User user) {
         // Validate username, password, name, lastname, email and phone
