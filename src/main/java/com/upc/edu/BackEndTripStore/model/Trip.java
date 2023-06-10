@@ -28,11 +28,4 @@ public class Trip {
     @JoinColumn(name = "id_user", nullable = false)
     private User user;
 
-    public int getUserId() {
-        return user != null ? user.getId() : 0;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 }

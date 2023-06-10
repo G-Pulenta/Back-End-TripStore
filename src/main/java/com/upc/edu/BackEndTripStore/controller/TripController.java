@@ -1,7 +1,6 @@
 package com.upc.edu.BackEndTripStore.controller;
 
 import com.upc.edu.BackEndTripStore.model.Trip;
-import com.upc.edu.BackEndTripStore.model.User;
 import com.upc.edu.BackEndTripStore.service.TripService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -35,6 +34,11 @@ public class TripController {
         return new ResponseEntity<>(trips, HttpStatus.OK);
     }
 
+    @PostMapping("/trips")
+    public ResponseEntity<Trip> createTrip(@RequestBody Trip trip) {
+        Trip newTrip = tripService.saveTrip(trip);
+        return new ResponseEntity<>(newTrip, HttpStatus.CREATED);
+    }
 
 
     @DeleteMapping("/trips/{id}")
