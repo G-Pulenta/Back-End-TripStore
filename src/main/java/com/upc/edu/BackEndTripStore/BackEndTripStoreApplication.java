@@ -9,7 +9,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @SpringBootApplication
 public class BackEndTripStoreApplication {
 
-	public String PORT = System.getenv("PORT");
 	public static void main(String[] args) {
 		SpringApplication.run(BackEndTripStoreApplication.class, args);
 	}
