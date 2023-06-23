@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80656fa7-69b2-4983-850e-2f2b84acd5f0" name="Changes" comment="Fix: Server Site Deployment Fixed">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/upc/edu/BackEndTripStore/model/Trip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/upc/edu/BackEndTripStore/model/Trip.java" afterDir="false" />
+    <list default="true" id="80656fa7-69b2-4983-850e-2f2b84acd5f0" name="Changes" comment="Fix: Server UnitOfWork Deployment Fixed">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +37,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -66,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1687475647725</updated>
-      <workItem from="1687475650640" duration="944000" />
+      <workItem from="1687475650640" duration="3365000" />
     </task>
     <task id="LOCAL-00001" summary="Fix: Url Deployment Fixed">
       <option name="closed" value="true" />
@@ -92,7 +96,15 @@
       <option name="project" value="LOCAL" />
       <updated>1687476245313</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fix: Server UnitOfWork Deployment Fixed">
+      <option name="closed" value="true" />
+      <created>1687476638792</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687476638792</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +114,7 @@
     <MESSAGE value="Fix: Url Deployment Fixed" />
     <MESSAGE value="Fix: Port Deployment Fixed" />
     <MESSAGE value="Fix: Server Site Deployment Fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: Server Site Deployment Fixed" />
+    <MESSAGE value="Fix: Server UnitOfWork Deployment Fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: Server UnitOfWork Deployment Fixed" />
   </component>
 </project>
