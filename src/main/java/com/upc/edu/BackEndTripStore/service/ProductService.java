@@ -9,5 +9,4 @@ public interface ProductService {
     Product getProductById(int id);
     Product saveProduct(Product product);
     void deleteProduct(int id);
-    Double getProductRatingById(int id);
 }

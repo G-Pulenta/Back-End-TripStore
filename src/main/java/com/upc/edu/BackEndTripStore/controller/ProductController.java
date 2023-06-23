@@ -36,16 +36,6 @@ public class ProductController {
         }
     }
 
-    @GetMapping("/products/{id}/rating")
-    public ResponseEntity<Double> getProductRatingById(@PathVariable int id) {
-        Double productRating = productService.getProductRatingById(id);
-        if (productRating != null) {
-            return new ResponseEntity<>(productRating, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-    }
-
     @PostMapping("/products")
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {
         Product newProduct = productService.saveProduct(product);
