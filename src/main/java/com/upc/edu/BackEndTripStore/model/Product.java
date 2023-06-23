@@ -26,6 +26,9 @@ public class Product {
     @Column(name = "product_price", nullable = false, length = 10)
     private Double productPrice;
 
+    @Column(name = "product_image", nullable = false, length = 250)
+    private String productImage;
+
     @Column(name = "product_rating", nullable = false, length = 10)
     private Double productRating;
 }
