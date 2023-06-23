@@ -24,6 +24,9 @@ public class Trip {
     @Column(name = "destination", nullable = false, length = 50)
     private String destination;
 
+    @Column(name = "date", nullable = false, length = 50)
+    private String date;
+
     @ManyToOne
     @JoinColumn(name = "id_user", nullable = false)
     private User user;
