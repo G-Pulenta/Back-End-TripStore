@@ -271,7 +271,6 @@ class UserControllerTest {
                 return null;
             }
         };
-
         UserController instancia = new UserController(userService);
         user.setUsername("Nicolas420");
         user.setPassword("Haro");
