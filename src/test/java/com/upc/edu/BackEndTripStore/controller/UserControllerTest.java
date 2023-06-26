@@ -558,4 +558,50 @@ class UserControllerTest {
 
         assertThrows(ValidationException.class, () -> {instancia.validateUser(user); });
     }
+
+    @Test
+    void testValidatePhoneCharacterLimit(){
+        var user=new User();
+        var userService= new UserService() {
+            @Override
+            public List<User> getAllUsers() {
+                return null;
+            }
+
+            @Override
+            public User getUserById(int id) {
+                return null;
+            }
+
+            @Override
+            public User createUser(User user) {
+                return null;
+            }
+
+            @Override
+            public User updateUser(int id, User updatedUser) {
+                return null;
+            }
+
+            @Override
+            public void deleteUser(int id) {
+
+            }
+
+            @Override
+            public User getUserByUsernameAndPassword(String username, String password) {
+                return null;
+            }
+        };
+        UserController instancia = new UserController(userService);
+
+        user.setUsername("Nicolas69");
+        user.setPassword("Haro");
+        user.setName("Nicolas");
+        user.setPhone("123456789124");
+        user.setEmail("Nickhardav@gamil.com");
+        user.setLastname("Dávila");
+
+        assertThrows(ValidationException.class, () -> {instancia.validateUser(user); });
+    }
 }
