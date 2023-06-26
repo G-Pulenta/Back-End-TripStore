@@ -598,7 +598,7 @@ class UserControllerTest {
         user.setUsername("Nicolas69");
         user.setPassword("Haro");
         user.setName("Nicolas");
-        user.setPhone("123456789124");
+        user.setPhone("12345678912");
         user.setEmail("Nickhardav@gamil.com");
         user.setLastname("Dávila");
 
