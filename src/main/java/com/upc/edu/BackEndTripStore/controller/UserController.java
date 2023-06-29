@@ -17,6 +17,7 @@ import java.util.Map;
 @RequestMapping("/api/v1")
 public class UserController {
     private final UserService userService;
+
     @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
@@ -73,8 +74,9 @@ public class UserController {
         // Username Validation
         if (user.getUsername() == null || user.getUsername().trim().isEmpty()) {
             throw new ValidationException("Username is required");
+
         }
-        if (user.getUsername().length()>30) {
+       if (user.getUsername().length()>30) {
             throw new ValidationException("Username must not be more than 30 characters");
         }
 
@@ -82,7 +84,7 @@ public class UserController {
         if (user.getPassword() == null || user.getPassword().trim().isEmpty()) {
             throw new ValidationException("Password is required");
         }
-        if (user.getPassword().length()>30) {
+      if (user.getPassword().length()>30) {
             throw new ValidationException("Password must not be more than 30 characters");
         }
 
@@ -117,6 +119,7 @@ public class UserController {
         if (user.getPhone().length()>9) {
             throw new ValidationException("Phone must not be more than 9 characters");
         }
+       // return contador;
     }
 
 }
