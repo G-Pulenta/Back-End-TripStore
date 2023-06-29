@@ -324,7 +324,6 @@ class UserControllerTest {
         user.setPhone("123456789");
         user.setEmail("Nickhardav@gamil.com");
 
-
         assertThrows(ValidationException.class, () -> {instancia.validateUser(user); });
 
     }
