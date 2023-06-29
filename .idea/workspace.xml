@@ -4,18 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80656fa7-69b2-4983-850e-2f2b84acd5f0" name="Changes" comment="Fix: Server UnitOfWork Deployment Fixed">
+    <list default="true" id="80656fa7-69b2-4983-850e-2f2b84acd5f0" name="Changes" comment="Test: All cases of missing user's information are catched">
+      <change afterPath="$PROJECT_DIR$/src/support/AddProducts.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/support/BuyerRegister.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/support/FindProduct.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/support/GenerateBuy.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/support/SalePayment.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/support/SalesTravelers.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/upc/edu/BackEndTripStore/controller/UserControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/upc/edu/BackEndTripStore/controller/UserControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="test/TS-1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,16 +59,109 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "bugfix/db-url",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/USER/Documents/Open Source/Finalito/Back-End-TripStore",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.upc.edu.BackEndTripStore.controller" />
+      <recent name="com.upc.edu.BackEndTripStore.model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.UserControllerTest.testValidateNoPassword">
+    <configuration name="UserControllerTest.testValidarExcepcionUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Back-End-TripStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.upc.edu.BackEndTripStore.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.upc.edu.BackEndTripStore.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.upc.edu.BackEndTripStore.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="testValidarExcepcionUsername" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.testValidateNoName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Back-End-TripStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.upc.edu.BackEndTripStore.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.upc.edu.BackEndTripStore.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.upc.edu.BackEndTripStore.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="testValidateNoName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.testValidateNoPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Back-End-TripStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.upc.edu.BackEndTripStore.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.upc.edu.BackEndTripStore.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.upc.edu.BackEndTripStore.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="testValidateNoPassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.testValidateNoUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Back-End-TripStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.upc.edu.BackEndTripStore.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.upc.edu.BackEndTripStore.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.upc.edu.BackEndTripStore.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="testValidateNoUsername" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserControllerTest.testValidateUsernameExtra" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Back-End-TripStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.upc.edu.BackEndTripStore.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.upc.edu.BackEndTripStore.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.upc.edu.BackEndTripStore.controller.UserControllerTest" />
+      <option name="METHOD_NAME" value="testValidateUsernameExtra" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BackEndTripStoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Back-End-TripStore" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.upc.edu.BackEndTripStore.BackEndTripStoreApplication" />
@@ -61,6 +169,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserControllerTest.testValidateNoPassword" />
+        <item itemvalue="JUnit.UserControllerTest.testValidateUsernameExtra" />
+        <item itemvalue="JUnit.UserControllerTest.testValidateNoUsername" />
+        <item itemvalue="JUnit.UserControllerTest.testValidarExcepcionUsername" />
+        <item itemvalue="JUnit.UserControllerTest.testValidateNoName" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -104,17 +221,84 @@
       <option name="project" value="LOCAL" />
       <updated>1687476638792</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fix: Server UnitOfWork Deployment Fixed">
+      <created>1687656016624</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687656016624</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Test: Validation parameters work">
+      <created>1687656939737</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687656939737</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Test: All cases of missing user's information are catched">
+      <created>1687656987467</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1687656987467</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Test: All cases of missing user's information are catched">
+      <created>1687657188571</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1687657188571</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Test: All cases of missing user's information are catched">
+      <created>1687657893800</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1687657893800</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Test: All cases of missing user's information are catched">
+      <created>1687657954998</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1687657954998</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/test/TS-2" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix: Url Deployment Fixed" />
     <MESSAGE value="Fix: Port Deployment Fixed" />
     <MESSAGE value="Fix: Server Site Deployment Fixed" />
     <MESSAGE value="Fix: Server UnitOfWork Deployment Fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: Server UnitOfWork Deployment Fixed" />
+    <MESSAGE value="Test: Validation parameters work" />
+    <MESSAGE value="Test: All cases of missing user's information are catched" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test: All cases of missing user's information are catched" />
   </component>
 </project>

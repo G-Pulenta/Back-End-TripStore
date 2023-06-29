@@ -99,6 +99,7 @@ class UserControllerTest {
          assertThrows(ValidationException.class, () -> {instancia.validateUser(user); });
 
     }
+
     @Test
     void testValidateNoPassword() {
         var user=new User();
@@ -107,25 +108,20 @@ class UserControllerTest {
             public List<User> getAllUsers() {
                 return null;
             }
-
             @Override
             public User getUserById(int id) {
                 return null;
             }
-
             @Override
             public User createUser(User user) {
                 return null;
             }
-
             @Override
             public User updateUser(int id, User updatedUser) {
                 return null;
             }
-
             @Override
             public void deleteUser(int id) {
-
             }
 
             @Override
