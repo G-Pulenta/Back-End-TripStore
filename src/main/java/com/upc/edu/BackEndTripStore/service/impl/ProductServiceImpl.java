@@ -39,7 +39,7 @@ public class ProductServiceImpl implements ProductService {
             productToUpdate.setProductName(product.getProductName());
             productToUpdate.setProductDescription(product.getProductDescription());
             productToUpdate.setProductPrice(product.getProductPrice());
-            productToUpdate.setProductImage(product.getProductImage());
+            productToUpdate.setProductImageUrl(product.getProductImageUrl());
             productToUpdate.setProductRating(product.getProductRating());
             return productRepository.save(productToUpdate);
         } else {
@@ -50,5 +50,20 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void deleteProduct(int id) {
         productRepository.deleteById(id);
+    }
+
+    @Override
+    public Product getProductByProductName(String productName) {
+        return productRepository.findByProductName(productName);
+    }
+
+    @Override
+    public Product getProductByCategory(String productCategory) {
+        return productRepository.findByProductCategory(productCategory);
+    }
+
+    @Override
+    public Product getProductByRating(Double productRating) {
+        return productRepository.findByProductRating(productRating);
     }
 }

@@ -8,6 +8,10 @@ public interface ProductService {
     List<Product> getAllProducts();
     Product getProductById(int id);
     Product saveProduct(Product product);
-    void deleteProduct(int id);
     Product updateProduct(int id, Product product);
+    void deleteProduct(int id);
+
+    Product getProductByProductName(String productName);
+    Product getProductByCategory(String category);
+    Product getProductByRating(Double rating);
 }

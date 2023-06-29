@@ -1,6 +1,8 @@
 package com.upc.edu.BackEndTripStore.controller;
 
+import com.upc.edu.BackEndTripStore.exception.ValidationException;
 import com.upc.edu.BackEndTripStore.model.Product;
+import com.upc.edu.BackEndTripStore.repository.ProductRepository;
 import com.upc.edu.BackEndTripStore.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,8 +13,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/api/tripstore/v1")
 public class ProductController {
+
     private final ProductService productService;
 
     @Autowired
@@ -20,41 +23,64 @@ public class ProductController {
         this.productService = productService;
     }
 
+    // EndPoint: /api/tripstore/v1/products
+    // Method: GET
+    @Transactional(readOnly = true)
     @GetMapping("/products")
     public ResponseEntity<List<Product>> getAllProducts() {
-        List<Product> products = productService.getAllProducts();
-        return new ResponseEntity<>(products, HttpStatus.OK);
+        return new ResponseEntity<>(productService.getAllProducts(), HttpStatus.OK);
     }
 
+    // EndPoint: /api/tripstore/v1/products/{id}
+    // Method: GET
+    @Transactional(readOnly = true)
     @GetMapping("/products/{id}")
     public ResponseEntity<Product> getProductById(@PathVariable int id) {
-        Product product = productService.getProductById(id);
-        if (product != null) {
-            return new ResponseEntity<>(product, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+        return new ResponseEntity<>(productService.getProductById(id), HttpStatus.OK);
     }
 
+    // EndPoint: /api/tripstore/v1/products
+    // Method: POST
+    @Transactional
     @PostMapping("/products")
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {
-        Product newProduct = productService.saveProduct(product);
-        return new ResponseEntity<>(newProduct, HttpStatus.CREATED);
+        validateProduct(product);
+        existsProductByProductName(product);
+        return new ResponseEntity<>(productService.saveProduct(product), HttpStatus.CREATED);
     }
 
+    // EndPoint: /api/tripstore/v1/products/{id}
+    // Method: PUT
+    @Transactional
     @PutMapping("/products/{id}")
     public ResponseEntity<Product> updateProduct(@PathVariable int id, @RequestBody Product product) {
-        Product updatedProduct = productService.updateProduct(id, product);
-        if (updatedProduct != null) {
-            return new ResponseEntity<>(updatedProduct, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
+        validateProduct(product);
+        return new ResponseEntity<>(productService.updateProduct(id, product), HttpStatus.OK);
     }
 
+    // EndPoint: /api/tripstore/v1/products/{id}
+    // Method: DELETE
     @DeleteMapping("/products/{id}")
     public ResponseEntity<Void> deleteProduct(@PathVariable int id) {
         productService.deleteProduct(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    public void validateProduct(Product product) {
+        if (product.getProductName() == null || product.getProductName().trim().isEmpty()) {
+            throw new ValidationException("Product name is required");
+        }
+        if (product.getProductDescription() == null || product.getProductDescription().trim().isEmpty()) {
+            throw new ValidationException("Product description is required");
+        }
+        if (product.getProductPrice() == null || product.getProductPrice() <= 0) {
+            throw new ValidationException("Product price is required");
+        }
+    }
+
+    private void existsProductByProductName(Product product) {
+        if (productService.getProductByProductName(product.getProductName()) != null) {
+            throw new ValidationException("Product name already exists");
+        }
     }
 }
