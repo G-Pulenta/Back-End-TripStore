@@ -2,7 +2,6 @@ package com.upc.edu.BackEndTripStore.controller;
 
 import com.upc.edu.BackEndTripStore.exception.ValidationException;
 import com.upc.edu.BackEndTripStore.model.Product;
-import com.upc.edu.BackEndTripStore.repository.ProductRepository;
 import com.upc.edu.BackEndTripStore.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
