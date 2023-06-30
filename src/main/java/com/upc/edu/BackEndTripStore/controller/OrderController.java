@@ -2,7 +2,6 @@ package com.upc.edu.BackEndTripStore.controller;
 
 
 import com.upc.edu.BackEndTripStore.model.Order;
-import com.upc.edu.BackEndTripStore.repository.OrderRepository;
 import com.upc.edu.BackEndTripStore.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
