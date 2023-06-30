@@ -25,36 +25,36 @@ public class ShoppingCartController {
         this.userService = userService;
     }
 
-    // Endpoint: /api/tripstore/v1/shoppingcarts
+    // Endpoint: /api/tripstore/v1/shopping-carts
     // Method: GET
     @Transactional(readOnly = true)
-    @GetMapping("/shoppingcarts")
+    @GetMapping("/shopping-carts")
     public ResponseEntity<List<ShoppingCart>> getAllShoppingCarts() {
         return new ResponseEntity<>(shoppingCartService.getAllShoppingCarts(), HttpStatus.OK);
     }
 
-    // Endpoint: /api/tripstore/v1/shoppingcarts/{id}
+    // Endpoint: /api/tripstore/v1/shopping-carts/{id}
     // Method: GET
     @Transactional(readOnly = true)
-    @GetMapping("/shoppingcarts/{id}")
+    @GetMapping("/shopping-carts/{id}")
     public ResponseEntity<ShoppingCart> getShoppingCartById(@PathVariable int id) {
         return new ResponseEntity<>(shoppingCartService.getShoppingCartById(id), HttpStatus.OK);
     }
 
-    // Endpoint: /api/tripstore/v1/shoppingcarts/users/{id}
+    // Endpoint: /api/tripstore/v1/shopping-carts/users/{id}
     // Method: GET
     @Transactional(readOnly = true)
-    @GetMapping("/shoppingcarts/users/{id}")
+    @GetMapping("/shopping-carts/users/{id}")
     public ResponseEntity<ShoppingCart> getShoppingCartByUserId(@PathVariable int id) {
         notFoundUser(id);
         notFoundShoppingCartByUserId(id);
         return new ResponseEntity<>(shoppingCartService.getShoppingCartByUserId(id), HttpStatus.OK);
     }
 
-    // Endpoint: /api/tripstore/v1/shoppingcarts
+    // Endpoint: /api/tripstore/v1/shopping-carts
     // Method: POST
     @Transactional
-    @PostMapping("/shoppingcarts")
+    @PostMapping("/shopping-carts")
     public ResponseEntity<ShoppingCart> createShoppingCart(@RequestBody ShoppingCart shoppingCart) {
         validateShoppingCart(shoppingCart);
         notFoundUser(shoppingCart.getUser().getId());
@@ -62,9 +62,9 @@ public class ShoppingCartController {
         return new ResponseEntity<>(shoppingCartService.saveShoppingCart(shoppingCart), HttpStatus.CREATED);
     }
 
-    // Endpoint: /api/tripstore/v1/shoppingcarts/{id}
+    // Endpoint: /api/tripstore/v1/shopping-carts/{id}
     // Method: DELETE
-    @DeleteMapping("/shoppingcarts/{id}")
+    @DeleteMapping("/shopping-carts/{id}")
     public ResponseEntity<String> deleteShoppingCart(@PathVariable int id) {
         shoppingCartService.deleteShoppingCart(id);
         return new ResponseEntity<>("ShoppingCart with id: " + id + " was deleted", HttpStatus.OK);
