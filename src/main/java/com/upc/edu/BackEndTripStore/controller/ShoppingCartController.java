@@ -3,7 +3,6 @@ package com.upc.edu.BackEndTripStore.controller;
 import com.upc.edu.BackEndTripStore.exception.ResourceNotFoundException;
 import com.upc.edu.BackEndTripStore.exception.ValidationException;
 import com.upc.edu.BackEndTripStore.model.ShoppingCart;
-import com.upc.edu.BackEndTripStore.model.User;
 import com.upc.edu.BackEndTripStore.service.ShoppingCartService;
 import com.upc.edu.BackEndTripStore.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
