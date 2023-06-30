@@ -60,9 +60,9 @@ public class ProductController {
     // EndPoint: /api/tripstore/v1/products/{id}
     // Method: DELETE
     @DeleteMapping("/products/{id}")
-    public ResponseEntity<Void> deleteProduct(@PathVariable int id) {
+    public ResponseEntity<String> deleteProduct(@PathVariable int id) {
         productService.deleteProduct(id);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return new ResponseEntity<>("Product with id: " + id + " was deleted", HttpStatus.OK);
     }
 
     public void validateProduct(Product product) {
